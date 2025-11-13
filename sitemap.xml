@@ -45,6 +45,13 @@
     </url>
     
     <url>
+        <loc>/assets/css/main.css</loc>
+        <lastmod>2025-11-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/no-downloads.html</loc>
         <lastmod>2025-11-13</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,14 +94,14 @@
     </url>
     
     <url>
-        <loc>/assets/css/main.css</loc>
+        <loc>/feed.xml</loc>
         <lastmod>2025-11-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/feed.xml</loc>
+        <loc>/assets/css/main.css.map</loc>
         <lastmod>2025-11-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -112,6 +119,13 @@
 
     
           <!-- Avoid duplication with posts -->
+            
+            <url>
+                <loc>/abouts/presentation.html</loc>
+                <lastmod>2025-11-13</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.5</priority>
+            </url>
             
             <url>
                 <loc>/abouts/site-description.html</loc>

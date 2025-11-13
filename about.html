@@ -80,17 +80,23 @@
 
 <p>MOREL also has a <a href="/morel-no-code-generator/search">search engine</a> that allows you to find works directly.</p>
 
-                  <h1 id="build-your-morel-website-from-a-zotero-collection-in-7-simple-steps">Build your MOREL website from a Zotero collection in 7 simple steps</h1>
-<ul>
-  <li><strong>Prepare the Zotero Fields</strong> for a MOREL website {#zotero-fields}. MOREL items are added in the same way that items are added in any <a href="https://www.zotero.org/support/adding_items_to_zotero">Zotero library</a>. In its current version, MOREL can only process items of type <code class="language-plaintext highlighter-rouge">book</code>. Since not all the fields needed for MOREL are available for the <code class="language-plaintext highlighter-rouge">book</code> content type, some considerations must be made:
+                  <h1 id="build-your-morel-website-from-a-zotero-collection-in-9-simple-steps">Build your MOREL website from a Zotero collection in 9 simple steps</h1>
+<ol>
+  <li><strong>Check if you have the requirements</strong>
+    <ul>
+      <li>A <a href="https://www.zotero.org/user/register/">Zotero account</a></li>
+      <li>A <a href="https://github.com/signup">GitHub account</a></li>
+    </ul>
+  </li>
+  <li><strong>Prepare the Zotero Fields</strong> for a MOREL website. MOREL items are added in the same way that items are added in any <a href="https://www.zotero.org/support/adding_items_to_zotero">Zotero library</a>. In its current version, MOREL can only process items of type <code class="language-plaintext highlighter-rouge">book</code>. Since not all the fields needed for MOREL are available for the <code class="language-plaintext highlighter-rouge">book</code> content type, some considerations must be made:
     <ul>
       <li>Excerpt: the fragment from each MOREL record corresponds to the <code class="language-plaintext highlighter-rouge">notes</code> of Zotero (see the <a href="https://www.zotero.org/support/notes">documentation</a> about Zotero notes). In its current version, MOREL <em>only accepts one excerpt per book</em>.</li>
       <li>Cover: the cover is a jpg file that is added as an <code class="language-plaintext highlighter-rouge">attachment</code> to the Zotero item (see the Zotero attachments <a href="https://www.zotero.org/support/attaching_files">documentation</a>).</li>
     </ul>
   </li>
-  <li><strong>Fork this repository</strong> — that is, create a copy in your <a href="https://github.com">GitHub</a> account.</li>
+  <li><strong><a href="https://github.com/morelrep/morel-no-code-generator/fork">Fork</a> this repository</strong> — that is, <a href="https://github.com/morelrep/morel-no-code-generator/fork">create a copy</a> in your <a href="https://github.com">GitHub</a> account.</li>
   <li><strong>Go to the <code class="language-plaintext highlighter-rouge">actions</code> tab</strong> and enable workflows.</li>
-  <li><strong>Open <code class="language-plaintext highlighter-rouge">_config.yml</code> and change</strong>:
+  <li><strong>Open <code class="language-plaintext highlighter-rouge">_config.yml</code></strong> and change:
     <ul>
       <li>The <code class="language-plaintext highlighter-rouge">title</code> to your site’s.</li>
       <li>The <code class="language-plaintext highlighter-rouge">tagline</code> to your site’s.</li>
@@ -98,11 +104,37 @@
       <li>The <code class="language-plaintext highlighter-rouge">jotform</code> link (create your free account at https://www.jotform.com/).</li>
     </ul>
   </li>
+  <li><strong>Replace or add to <code class="language-plaintext highlighter-rouge">assets/img/tema</code></strong> your preferred:
+    <ul>
+      <li>logo.png</li>
+      <li>pattern.png</li>
+      <li>avatar.png</li>
+    </ul>
+  </li>
   <li><strong>Go to the <code class="language-plaintext highlighter-rouge">settings</code> tab</strong>, open the <code class="language-plaintext highlighter-rouge">pages</code> section, and select <code class="language-plaintext highlighter-rouge">gh-pages</code> as the branch that will build the site.</li>
   <li><strong>Open the file <code class="language-plaintext highlighter-rouge">_abouts/site-description.md</code></strong> and write a description for your site. The <code class="language-plaintext highlighter-rouge">&lt;!-- more --&gt;</code> line separates what appears in the footer across all pages from the longer description that appears on the <code class="language-plaintext highlighter-rouge">about</code> page only.</li>
-  <li><strong>Generate the content from Zotero</strong> by exporting a collection, subcollection or library as a <code class="language-plaintext highlighter-rouge">csv</code> file, and replacing the content of <code class="language-plaintext highlighter-rouge">assets/data/books_zotero.csv</code></li>
-</ul>
+  <li><strong>Generate the content from Zotero</strong> by <a href="https://forums.zotero.org/discussion/5286/can-one-export-a-collection-and-not-the-entire-library">exporting a collection</a>, subcollection or library as a <code class="language-plaintext highlighter-rouge">csv</code> file, and replacing the content of <code class="language-plaintext highlighter-rouge">assets/data/books_zotero.csv</code>.
+    <h1 id="other-features">Other features</h1>
+    <p>To add cover images to your MOREL site, follow these steps:</p>
+  </li>
+  <li>Add a cover image to your item in your Zotero library by dragging it as an attachment</li>
+  <li>Clone the repository in a local folder</li>
+  <li>Create a Python environment from the root of the folder using <code class="language-plaintext highlighter-rouge">python3 -m venv assets/env</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">source assets/env/bin/activate</code></li>
+  <li>Run ```pip install r requirements.txt``</li>
+  <li>Export your library or collection from Zotero as .csv file, and save it as <code class="language-plaintext highlighter-rouge">assets/data/books_zotero.csv</code>. Remember to check the “add notes” option to add excerpts.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">python3 assets/env/src/morel-generate.py</code></li>
+  <li>Commit your changes <strong>adding <code class="language-plaintext highlighter-rouge">[skip ci]</code> to the commit message</strong>.</li>
+  <li>Push your changes to GitHub.
+    <h1 id="to-add-cover-images-with-no-code">To add cover images with no code</h1>
+    <p>For a MOREL no-code generator with cover images drawn from a Zotero library you can:</p>
+  </li>
+</ol>
 
+<ul>
+  <li><a href="mailto:proyectomorel@gmail.com">Request an invoice</a> for a customized service</li>
+  <li><a href="https://www.addtoany.com/share#url=http%3A%2F%2F127.0.0.1%3A4000%2Fmorel-no-code-generator%2F&amp;title=%7C%20MOREL%20no-code%20website%20generator">Promote this project</a> to find code contributors that help develping this feature.</li>
+</ul>
 
 
         </div>

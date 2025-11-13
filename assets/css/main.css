@@ -21,8 +21,12 @@ body {
   line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
+ol {
+  list-style-position: outside;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 blockquote, q {
@@ -183,16 +187,26 @@ p.index {
 }
 
 ol, ul {
-  list-style: inside;
   font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 1.2rem;
+}
+
+ul ul, ol ul {
+  font-size: 1rem;
+  margin-left: 1.8rem;
 }
 
 code {
   font-weight: lighter;
   font-style: oblique;
   font-size: medium;
+  font-family: "Monaco", "Consolas", "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #333;
 }
 
 :root {
@@ -227,7 +241,7 @@ h1.book {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.24rem;
   font-weight: 600;
   line-height: 2rem;
 }
