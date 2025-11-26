@@ -3,6 +3,7 @@ title: description
 lang: en
 ---
 Welcome to Black Latin American Writers In Translation, an oganization and digital project that highlights the historical works of Black Latin American writers and their translated works. 
+BLAWiT is a resource for readers, writers, publishers, students and teachers interested in Black American and Latin American culture in general, and Black Latin American culture in particular. It gathers book covers, excerpts, bibliographic clues and digital downloads of works by black Latin American authors in original language and in translation.
 <!-- more -->
 
 Works are organized by dynamic lists, which automatically group the works according to common characteristics:
