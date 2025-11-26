@@ -10,4 +10,4 @@ By making Afro-Latin American writers more readily available to a North American
 
 In its first stage, the website has been fed by the compilations of Mark Sanders, Paulette Ramsay, Antonio D Tillis, Keenan Norris, Idelfonso Pereda Valdés and Emilio Vallagas. But the archive is open for users and beneficiaries of the platform to [add new content](https://blawit.org/add).
 
-If you have a work or translation in mind that is not part of this archive, please [suggest its incorporation](https://blawit.org/add).
+If you have a work or translation in mind that is not part of this archive, please [suggest its incorporation](https://form.jotform.com/250986579211062).
