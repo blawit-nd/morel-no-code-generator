@@ -1,3 +1,3 @@
 ---
-title: Schulman, Iván A
+title: Schulman, Iván A.
 ---
